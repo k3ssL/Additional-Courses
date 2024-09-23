@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 674px;
+    margin: 40px 0 0 64px;
+}
+
+.category_name {
+    font-size: 32px;
+    font-family: Prosto One, sans-serif;
+    margin: 32px auto 34px 64px;
+}
