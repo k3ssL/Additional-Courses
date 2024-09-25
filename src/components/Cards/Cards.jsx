@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import classes from "./Cards.module.css"
 import Card from "./UI/Card"
-import axios from "axios"
+import { useCards } from "./useCards"
 
 const Cards = ({ activeCategory }) => {
-    const [courses, setCourses] = useState([])
-    useEffect(() => {
-        async function fetchCourses() {
-            const response = await axios.get("https://66f19d744153791915518fff.mockapi.io/api/courses")
-            await setCourses(response.data)
-        }
-        fetchCourses()
-    }, [])
+    const { courses } = useCards()
 
     return (
         <div className={classes.container}>
