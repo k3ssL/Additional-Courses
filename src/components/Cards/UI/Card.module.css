@@ -52,7 +52,7 @@
     margin-top: 24px;
 }
 
-.bottom_part > p {
+.bottom_part > span {
     font-size: 22px;
     font-family: Proxima Nova, sans-serif;
     margin-right: 36px;
@@ -79,4 +79,16 @@
 .bottom_part > button:active {
     color: #ffffff;
     background-color: #1D548C;
+}
+
+.counter {
+    border-radius: 100px;
+    background-color: #1D548C;
+    width: 22px;
+    height: 22px;
+    color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
