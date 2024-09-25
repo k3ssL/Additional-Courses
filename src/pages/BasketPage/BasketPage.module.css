@@ -14,6 +14,12 @@
     font-weight: bold;
     font-size: 32px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+h1 > img {
+    margin-left: 10px;
 }
 
 .container > img {
@@ -40,4 +46,9 @@
     border: 0;
     cursor: pointer;
     margin-top: 74px;
+    transition: background-color 0.3s;
+}
+
+.container > button:hover {
+    background-color: #174a6e;
 }

@@ -32,11 +32,16 @@
     font-family: Proxima Nova, sans-serif;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .cart > hr {
     height: 25px;
     opacity: 25%;
+}
+
+.cart:hover {
+    background-color: #174a6e;
 }
 
 .right_part > img {

@@ -21,8 +21,13 @@
     color: white;
     font-family: McLaren, sans-serif;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .container > p {
     font-family: McLaren, sans-serif;
+}
+
+.active_category:hover {
+    background-color: #174a6e;
 }
