@@ -11,13 +11,13 @@ const Card = ({ image, name, types, price }) => {
             <span className={classes.card_name}>{name}</span>
             <div className={classes.types}>
                 {types.map((typeId, index) => (
-                    <p
+                    <span
                         key={typeId}
                         onClick={() => handleTypeClick(index)}
                         className={index === activeType ? classes.active_type : ""}
                     >
                         {typeNames[typeId]}
-                    </p>
+                    </span>
                 ))}
             </div>
             <div className={classes.bottom_part}>
