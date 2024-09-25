@@ -4,20 +4,22 @@ export const useCard = () => {
     const typeNames = ["студент", "школьник"]
     const [activeType, setActiveType] = useState(0)
     const [isButtonActive, setIsButtonActive] = useState(true)
+    const [clickCount, setClickCount] = useState(0)
+
+    const handleAddButtonClick = () => {
+        setIsButtonActive(true)
+        setClickCount((prevState) => prevState + 1)
+    }
 
     const handleTypeClick = (index) => {
         setActiveType(index)
     }
-
-    const handleButtonClick = () => {
-        setIsButtonActive(true)
-    }
-
     return {
         typeNames,
         activeType,
         isButtonActive,
         handleTypeClick,
-        handleButtonClick,
+        handleAddButtonClick,
+        clickCount,
     }
 }

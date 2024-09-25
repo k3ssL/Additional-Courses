@@ -3,12 +3,12 @@ import classes from "./Card.module.css"
 import { useCard } from "./useCard"
 
 const Card = ({ image, name, types, price }) => {
-    const { handleTypeClick, activeType, typeNames, handleButtonClick, isButtonActive } = useCard()
+    const { handleTypeClick, activeType, typeNames, isButtonActive, clickCount, handleAddButtonClick } = useCard()
 
     return (
         <div className={classes.container}>
             <img src={image} alt={"card-pic"} />
-            <p className={classes.card_name}>{name}</p>
+            <span className={classes.card_name}>{name}</span>
             <div className={classes.types}>
                 {types.map((typeId, index) => (
                     <p
@@ -21,10 +21,13 @@ const Card = ({ image, name, types, price }) => {
                 ))}
             </div>
             <div className={classes.bottom_part}>
-                <p>от {price} ₽</p>
-                <button onClick={handleButtonClick}>
-                    {" "}
-                    <img src={isButtonActive ? "/img/Vector2.png" : "/img/Vector.png"} alt={"Vector"} /> Добавить
+                <span>от {price} ₽</span>
+                <button onClick={handleAddButtonClick}>
+                    <img src={isButtonActive ? "/img/Vector2.png" : "/img/Vector.png"} alt={"add icon"} />
+                    Добавить
+                    {clickCount > 0 && (
+                        <span className={classes.counter}>{clickCount}</span> // Отображаем счётчик
+                    )}
                 </button>
             </div>
         </div>
