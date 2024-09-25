@@ -1,18 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import classes from "./Card.module.css"
+import { useCard } from "./useCard"
 
 const Card = ({ image, name, types, price }) => {
-    const typeNames = ["студент", "школьник"]
-    const [activeType, setActiveType] = useState(0)
-    const [isButtonActive, setIsButtonActive] = useState(true)
-
-    const handleTypeClick = (index) => {
-        setActiveType(index)
-    }
-
-    const handleButtonClick = () => {
-        setIsButtonActive(true)
-    }
+    const { handleTypeClick, activeType, typeNames, handleButtonClick, isButtonActive } = useCard()
 
     return (
         <div className={classes.container}>
