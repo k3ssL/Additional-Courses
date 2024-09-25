@@ -1,22 +1,25 @@
 import React from "react"
 import classes from "./Header.module.css"
-import { useNavigate } from "react-router-dom"
-import { BASKET_ROUTE, MAIN_ROUTE } from "../../utils/consts"
+import { MAIN_ROUTE } from "../../utils/consts"
+import { useHeader } from "./useHeader"
 
 const Header = () => {
-    const navigate = useNavigate()
+    const { location, handleLogoClick, handleCartButtonClick } = useHeader()
+
     return (
         <header className={classes.container}>
             <div className={classes.header}>
-                <img src={"/img/gorizontalny_logo 1.png"} alt={"logo"} onClick={() => navigate(MAIN_ROUTE)} />
-                <div className={classes.cart} onClick={() => navigate(BASKET_ROUTE)}>
-                    <p>520 ₽</p>
-                    <hr />
-                    <div className={classes.right_part}>
-                        <img src={"/img/iconfinder_shopping-cart_2561279 1.png"} alt={"cart-pic"} />
-                        <p>3</p>
+                <img src={"/img/gorizontalny_logo 1.png"} alt={"logo"} onClick={handleLogoClick} />
+                {location.pathname === MAIN_ROUTE && (
+                    <div className={classes.cart} onClick={handleCartButtonClick}>
+                        <span>520 ₽</span>
+                        <hr />
+                        <div className={classes.right_part}>
+                            <img src={"/img/iconfinder_shopping-cart_2561279 1.png"} alt={"cart-pic"} />
+                            <span>3</span>
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
             <hr />
         </header>
