@@ -17,9 +17,8 @@ export const useCategories = (setActiveCategories) => {
     useEffect(() => {
         async function fetchCategories() {
             const response = await axios.get("https://66f19d744153791915518fff.mockapi.io/api/categories")
-            const allCoursesCategory = { id: 0, name: "Все" }
-            setCategories([allCoursesCategory, ...response.data])
-            handleActiveCategory(0)
+            setCategories(response.data)
+            handleActiveCategory("0")
         }
 
         fetchCategories()
