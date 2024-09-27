@@ -4,18 +4,24 @@ import EmptyCart from "./UI/EmptyCart/EmptyCart"
 import CartItems from "./UI/CartItems/CartItems"
 import { useNavigate } from "react-router-dom"
 import { MAIN_ROUTE, SBP_ROUTE } from "../../utils/consts"
+import { useCart } from "../../context/CartContext"
 
 const BasketPage = () => {
-    const cartItems = [1]
+    const { cartItems, clearCart } = useCart()
     const navigate = useNavigate()
-    return cartItems ? (
+
+    const totalCourses = cartItems.reduce((acc, item) => acc + item.counter, 0)
+
+    const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.counter, 0)
+
+    return cartItems.length > 0 ? (
         <div className={classes.container}>
             <div className={classes.title}>
                 <div className={classes.cart}>
                     <img src={"/img/iconfinder_shopping-cart_2561279 2.png"} alt={"cart-pic"} />
                     <h1>Корзина</h1>
                 </div>
-                <div className={classes.trash}>
+                <div className={classes.trash} onClick={clearCart}>
                     <img src={"/img/iconfinder_trash-2_3324927 1.png"} alt={"trash-pic"} />
                     <p>Очистить корзину</p>
                 </div>
@@ -23,9 +29,9 @@ const BasketPage = () => {
             <hr />
             <CartItems />
             <div className={classes.total_courses}>
-                <span>Всего курсов: {cartItems.length} шт.</span>
+                <span>Всего курсов: {totalCourses} шт.</span>
                 <p>
-                    Сумма заказа: <span className={classes.total_courses_price}>900 ₽</span>
+                    Сумма заказа: <span className={classes.total_courses_price}>{totalPrice} ₽</span>
                 </p>
             </div>
             <div className={classes.bottom_buttons}>
