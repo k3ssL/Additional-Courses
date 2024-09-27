@@ -1,9 +1,23 @@
 import React from "react"
 import classes from "./Card.module.css"
 import { useCard } from "./useCard"
+import { useCart } from "../../../context/CartContext"
 
-const Card = ({ image, name, types, price }) => {
+const Card = ({ id, image, name, types, price }) => {
     const { handleTypeClick, activeType, typeNames, isButtonActive, clickCount, handleAddButtonClick } = useCard()
+    const { addToCart } = useCart()
+
+    const handleAddToCart = () => {
+        const course = {
+            id,
+            name,
+            image,
+            type: typeNames[activeType],
+            price,
+        }
+        addToCart(course)
+        handleAddButtonClick()
+    }
 
     return (
         <div className={classes.container}>
@@ -22,12 +36,10 @@ const Card = ({ image, name, types, price }) => {
             </div>
             <div className={classes.bottom_part}>
                 <span>от {price} ₽</span>
-                <button onClick={handleAddButtonClick}>
+                <button onClick={handleAddToCart}>
                     <img src={isButtonActive ? "/img/Vector2.png" : "/img/Vector.png"} alt={"add icon"} />
                     Добавить
-                    {clickCount > 0 && (
-                        <span className={classes.counter}>{clickCount}</span> // Отображаем счётчик
-                    )}
+                    {clickCount > 0 && <span className={classes.counter}>{clickCount}</span>}
                 </button>
             </div>
         </div>

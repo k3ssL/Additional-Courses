@@ -9,10 +9,11 @@ const Cards = ({ activeCategory }) => {
     return (
         <div className={classes.container}>
             {courses
-                .filter((course) => activeCategory === 0 || course.category === activeCategory)
+                .filter((course) => activeCategory === "0" || course.category === activeCategory)
                 .map((course) => (
                     <Card
                         key={course.id}
+                        id={course.id}
                         name={course.name}
                         image={course.image}
                         types={course.type}
