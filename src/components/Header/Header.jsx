@@ -2,9 +2,13 @@ import React from "react"
 import classes from "./Header.module.css"
 import { MAIN_ROUTE } from "../../utils/consts"
 import { useHeader } from "./useHeader"
+import { useCart } from "../../context/CartContext"
 
 const Header = () => {
     const { location, handleLogoClick, handleCartButtonClick } = useHeader()
+    const { cartItems } = useCart()
+
+    const totalCourses = cartItems.reduce((acc, item) => acc + item.counter, 0)
 
     return (
         <header className={classes.container}>
@@ -16,7 +20,7 @@ const Header = () => {
                         <hr />
                         <div className={classes.right_part}>
                             <img src={"/img/iconfinder_shopping-cart_2561279 1.png"} alt={"cart-pic"} />
-                            <span>3</span>
+                            <span>{totalCourses}</span>
                         </div>
                     </div>
                 )}
