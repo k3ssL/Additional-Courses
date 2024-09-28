@@ -1,6 +1,6 @@
 import React from "react"
 import classes from "./Cards.module.css"
-import Card from "./UI/Card"
+import Card from "../Card/Card"
 import { useCards } from "./useCards"
 
 const Cards = ({ activeCategory }) => {

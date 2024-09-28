@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import classes from "./Main.module.css"
-import Categories from "../../components/Categories/Categories"
-import Cards from "../../components/Cards/Cards"
+import Categories from "./UI/Categories/Categories"
+import Cards from "./UI/Cards/Cards"
 
 const Main = () => {
     const [activeCategory, setActiveCategory] = useState(0)

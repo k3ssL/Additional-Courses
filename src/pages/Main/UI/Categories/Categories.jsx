@@ -1,6 +1,6 @@
 import React from "react"
 import classes from "./Categories.module.css"
-import Category from "./UI/Category"
+import Category from "../Category/Category"
 import { useCategories } from "./useCategories"
 
 const Categories = ({ setActiveCategories }) => {

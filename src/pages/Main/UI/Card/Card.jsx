@@ -1,7 +1,7 @@
 import React from "react"
 import classes from "./Card.module.css"
 import { useCard } from "./useCard"
-import { useCart } from "../../../context/CartContext"
+import { useCart } from "../../../../context/CartContext"
 
 const Card = ({ id, image, name, types, price }) => {
     const { handleTypeClick, activeType, typeNames, isButtonActive, clickCount, handleAddButtonClick } = useCard()
