@@ -1,15 +1,15 @@
 @font-face {
-    src: url("../public/fonts/McLaren-Regular.ttf");
+    src: url("../../public/fonts/McLaren-Regular.ttf");
     font-family: McLaren;
 }
 
 @font-face {
-    src: url("../public/fonts/ProstoOne-Regular.ttf");
+    src: url("../../public/fonts/ProstoOne-Regular.ttf");
     font-family: Prosto One;
 }
 
 @font-face {
-    src: url("../public/fonts/proximanova_regular.ttf");
+    src: url("../../public/fonts/proximanova_regular.ttf");
     font-family: Proxima Nova;
 }
 

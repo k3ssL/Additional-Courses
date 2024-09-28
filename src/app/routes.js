@@ -1,6 +1,6 @@
-import { BASKET_ROUTE, MAIN_ROUTE } from "./utils/consts"
-import Main from "./pages/Main/Main"
-import Basket from "./pages/Basket/Basket"
+import { BASKET_ROUTE, MAIN_ROUTE } from "../utils/consts"
+import Main from "../pages/Main/Main"
+import Basket from "../pages/Basket/Basket"
 
 export const routes = [
     {
