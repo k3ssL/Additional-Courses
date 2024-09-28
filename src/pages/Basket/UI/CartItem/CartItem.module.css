@@ -1,0 +1,59 @@
+.container {
+    width: 814px;
+    height: 61px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px
+}
+
+.item_img {
+    width: 61px;
+    height: 61px;
+    margin-right: 27px;
+}
+
+.item_name_type {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    flex-grow: 2;
+}
+
+.item_name {
+    font-family: Prosto One, sans-serif;
+    font-size: 22px;
+}
+
+.item_type {
+    font-family: Prosto One, sans-serif;
+    font-size: 14px;
+    color: #B6B6B6;
+}
+
+.items_counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 102px;
+    height: 32px;
+    margin-right: 80px;
+}
+
+.counter {
+    font-family: Proxima Nova, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item_price {
+    font-family: Proxima Nova, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 93px;
+}
+
+.control_counter, .item_delete {
+    cursor: pointer;
+}
