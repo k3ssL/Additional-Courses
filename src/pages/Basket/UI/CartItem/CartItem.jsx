@@ -1,6 +1,6 @@
 import React from "react"
 import classes from "./CartItem.module.css"
-import { useCart } from "../../../../context/CartContext"
+import { useCart } from "../../../../shared/providers/CartContext"
 
 const CartItem = ({ id, img, name, type, counter, price }) => {
     const { increaseInCart, decreaseFromCart, removeFromCart } = useCart()

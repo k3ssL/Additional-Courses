@@ -1,6 +1,6 @@
 import React from "react"
 import EmptyCart from "./UI/EmptyCart/EmptyCart"
-import { useCart } from "../../context/CartContext"
+import { useCart } from "../../shared/providers/CartContext"
 import Cart from "./UI/Cart/Cart"
 
 const Basket = () => {

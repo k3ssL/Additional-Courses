@@ -1,7 +1,7 @@
 import React from "react"
 import classes from "./CartItems.module.css"
 import CartItem from "../CartItem/CartItem"
-import { useCart } from "../../../../context/CartContext"
+import { useCart } from "../../../../shared/providers/CartContext"
 
 const CartItems = () => {
     const { cartItems } = useCart()

@@ -2,7 +2,7 @@ import React from "react"
 import classes from "./Cart.module.css"
 import CartItems from "../CartItems/CartItems"
 import { MAIN_ROUTE, SBP_ROUTE } from "../../../../utils/consts"
-import { useCart } from "../../../../context/CartContext"
+import { useCart } from "../../../../shared/providers/CartContext"
 import { useNavigate } from "react-router-dom"
 
 const Cart = () => {

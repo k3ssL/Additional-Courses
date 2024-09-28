@@ -2,7 +2,7 @@ import React from "react"
 import classes from "./Header.module.css"
 import { MAIN_ROUTE } from "../../../utils/consts"
 import { useHeader } from "./useHeader"
-import { useCart } from "../../../context/CartContext"
+import { useCart } from "../../providers/CartContext"
 
 const Header = () => {
     const { location, handleLogoClick, handleCartButtonClick } = useHeader()
