@@ -1,4 +1,4 @@
-import Header from "../components/Header/Header"
+import Header from "../shared/UI/Header/Header"
 import { BrowserRouter } from "react-router-dom"
 import AppRouter from "./AppRouter"
 
