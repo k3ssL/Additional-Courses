@@ -1,12 +1,12 @@
 import React from "react"
-import classes from "./BasketPage.module.css"
+import classes from "./Basket.module.css"
 import EmptyCart from "./UI/EmptyCart/EmptyCart"
 import CartItems from "./UI/CartItems/CartItems"
 import { useNavigate } from "react-router-dom"
 import { MAIN_ROUTE, SBP_ROUTE } from "../../utils/consts"
 import { useCart } from "../../context/CartContext"
 
-const BasketPage = () => {
+const Basket = () => {
     const { cartItems, clearCart } = useCart()
     const navigate = useNavigate()
 
@@ -49,4 +49,4 @@ const BasketPage = () => {
     )
 }
 
-export default BasketPage
+export default Basket

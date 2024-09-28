@@ -1,15 +1,15 @@
 import { BASKET_ROUTE, MAIN_ROUTE } from "./utils/consts"
-import MainPage from "./pages/MainPage/MainPage"
-import BasketPage from "./pages/BasketPage/BasketPage"
+import Main from "./pages/Main/Main"
+import Basket from "./pages/Basket/Basket"
 
 export const routes = [
     {
         path: MAIN_ROUTE,
-        Component: MainPage,
+        Component: Main,
     },
 
     {
         path: BASKET_ROUTE,
-        Component: BasketPage,
+        Component: Basket,
     },
 ]

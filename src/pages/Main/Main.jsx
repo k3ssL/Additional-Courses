@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import classes from "./MainPage.module.css"
+import classes from "./Main.module.css"
 import Categories from "../../components/Categories/Categories"
 import Cards from "../../components/Cards/Cards"
 
-const MainPage = () => {
+const Main = () => {
     const [activeCategory, setActiveCategory] = useState(0)
     return (
         <div className={classes.container}>
@@ -13,4 +13,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage
+export default Main
