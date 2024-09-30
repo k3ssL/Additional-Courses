@@ -6,11 +6,7 @@ import { useCart } from "../../providers/CartContext"
 
 const Header = () => {
     const { location, handleLogoClick, handleCartButtonClick } = useHeader()
-    const { cartItems } = useCart()
-
-    const totalCourses = cartItems.reduce((acc, item) => acc + item.counter, 0)
-
-    const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.counter, 0)
+    const { totalCourses, totalPrice } = useCart()
 
     return (
         <header className={classes.container}>
@@ -18,7 +14,7 @@ const Header = () => {
                 <img src={"/img/gorizontalny_logo 1.png"} alt={"logo"} onClick={handleLogoClick} />
                 {location.pathname === MAIN_ROUTE && (
                     <div className={classes.cart} onClick={handleCartButtonClick}>
-                        <span>{totalPrice} ₽</span>
+                        <span className={classes.price}>{totalPrice} ₽</span>
                         <hr />
                         <div className={classes.right_part}>
                             <img src={"/img/iconfinder_shopping-cart_2561279 1.png"} alt={"cart-pic"} />

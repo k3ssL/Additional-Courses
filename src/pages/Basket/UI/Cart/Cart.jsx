@@ -6,12 +6,8 @@ import { useCart } from "../../../../shared/providers/CartContext"
 import { useNavigate } from "react-router-dom"
 
 const Cart = () => {
-    const { cartItems, clearCart } = useCart()
+    const { clearCart, totalCourses, totalPrice } = useCart()
     const navigate = useNavigate()
-
-    const totalCourses = cartItems.reduce((acc, item) => acc + item.counter, 0)
-
-    const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.counter, 0)
 
     return (
         <div className={classes.container}>
