@@ -10,13 +10,15 @@ const Header = () => {
 
     const totalCourses = cartItems.reduce((acc, item) => acc + item.counter, 0)
 
+    const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.counter, 0)
+
     return (
         <header className={classes.container}>
             <div className={classes.header}>
                 <img src={"/img/gorizontalny_logo 1.png"} alt={"logo"} onClick={handleLogoClick} />
                 {location.pathname === MAIN_ROUTE && (
                     <div className={classes.cart} onClick={handleCartButtonClick}>
-                        <span>520 ₽</span>
+                        <span>{totalPrice} ₽</span>
                         <hr />
                         <div className={classes.right_part}>
                             <img src={"/img/iconfinder_shopping-cart_2561279 1.png"} alt={"cart-pic"} />
