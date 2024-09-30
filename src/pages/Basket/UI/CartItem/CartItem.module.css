@@ -39,6 +39,7 @@
     width: 102px;
     height: 32px;
     margin-right: 80px;
+    min-width: 120px;
 }
 
 .counter {
@@ -52,6 +53,7 @@
     font-size: 22px;
     font-weight: bold;
     margin-right: 93px;
+    min-width: 100px;
 }
 
 .control_counter, .item_delete {
