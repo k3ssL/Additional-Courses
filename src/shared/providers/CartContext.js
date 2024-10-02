@@ -11,34 +11,45 @@ export const CartProvider = ({ children }) => {
 
     const addToCart = (course) => {
         setCartItems((prev) => {
-            const existingItem = prev.find((item) => item.id === course.id)
+            const courseKey = `${course.id}-${course.type}`
+            const existingItem = prev.find((item) => `${item.id}-${item.type}` === courseKey)
+
             if (existingItem) {
-                return prev.map((item) => (item.id === course.id ? { ...item, counter: item.counter + 1 } : item))
+                return prev.map((item) =>
+                    `${item.id}-${item.type}` === courseKey ? { ...item, counter: item.counter + 1 } : item,
+                )
             }
             return [...prev, { ...course, counter: 1 }]
         })
     }
 
-    const decreaseFromCart = (courseId) => {
-        setCartItems((prev) =>
-            prev
-                .map((item) => (item.id === courseId ? { ...item, counter: item.counter - 1 } : item))
-                .filter((item) => item.counter > 0),
-        )
+    const decreaseFromCart = (id, type) => {
+        setCartItems((prev) => {
+            const courseKey = `${id}-${type}`
+            return prev
+                .map((item) =>
+                    `${item.id}-${item.type}` === courseKey ? { ...item, counter: item.counter - 1 } : item,
+                )
+                .filter((item) => item.counter > 0)
+        })
     }
 
-    const increaseInCart = (courseId) => {
-        setCartItems((prev) =>
-            prev.map((item) => (item.id === courseId ? { ...item, counter: item.counter + 1 } : item)),
-        )
+    const increaseInCart = (id, type) => {
+        setCartItems((prev) => {
+            const courseKey = `${id}-${type}`
+            return prev.map((item) =>
+                `${item.id}-${item.type}` === courseKey ? { ...item, counter: item.counter + 1 } : item,
+            )
+        })
     }
 
     const clearCart = () => {
         setCartItems([])
     }
 
-    const removeFromCart = (courseId) => {
-        setCartItems((prev) => prev.filter((item) => item.id !== courseId))
+    const removeFromCart = (id, type) => {
+        const courseKey = `${id}-${type}`
+        setCartItems((prev) => prev.filter((item) => `${item.id}-${item.type}` !== courseKey))
     }
 
     const totalCourses = cartItems.reduce((acc, item) => acc + item.counter, 0)
