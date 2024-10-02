@@ -1,19 +1,4 @@
 @font-face {
-    src: url("../shared/fonts/McLaren-Regular.ttf");
-    font-family: McLaren;
-}
-
-@font-face {
-    src: url("../shared/fonts/ProstoOne-Regular.ttf");
-    font-family: Prosto One;
-}
-
-@font-face {
-    src: url("../shared/fonts/proximanova_regular.ttf");
-    font-family: Proxima Nova;
-}
-
-@font-face {
     src: url("../shared/fonts/Montserrat-Regular.ttf");
     font-family: Montserrat;
 }
