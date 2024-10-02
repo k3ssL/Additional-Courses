@@ -10,7 +10,6 @@
 }
 
 .container > h1 {
-    font-family: Proxima Nova, sans-serif;
     font-weight: bold;
     font-size: 32px;
     margin-bottom: 10px;
@@ -28,7 +27,6 @@ h1 > img {
 }
 
 .container > p {
-    font-family: Prosto One, sans-serif;
     font-size: 18px;
     color: #777777;
     margin-bottom: 21px;
@@ -41,7 +39,6 @@ h1 > img {
     border-radius: 30px;
     background-color: #1D548C;
     color: #ffffff;
-    font-family: Proxima Nova, sans-serif;
     font-weight: bold;
     border: 0;
     cursor: pointer;

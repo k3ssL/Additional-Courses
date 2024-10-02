@@ -18,7 +18,7 @@
 
 .card_name {
     font-size: 20px;
-    font-family: Prosto One, sans-serif;
+    font-weight: bold;
 }
 
 .types {
@@ -39,7 +39,7 @@
     width: 132px;
     height: 32px;
     font-size: 14px;
-    font-family: Prosto One, sans-serif;
+    font-weight: bold;
 }
 
 .active_type {
@@ -53,8 +53,7 @@
 }
 
 .bottom_part > span {
-    font-size: 22px;
-    font-family: Proxima Nova, sans-serif;
+    font-size: 20px;
     margin-right: 36px;
     font-weight: bold;
 }
@@ -66,7 +65,6 @@
     width: 155px;
     height: 40px;
     color: #1D548C;
-    font-family: Proxima Nova, sans-serif;
     font-weight: bold;
     display: flex;
     align-items: center;

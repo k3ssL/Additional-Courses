@@ -19,13 +19,12 @@
     cursor: pointer;
     background-color: #1D548C;
     color: white;
-    font-family: McLaren, sans-serif;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
 .container > p {
-    font-family: McLaren, sans-serif;
+    font-weight: bold;
 }
 
 .active_category:hover {

@@ -22,12 +22,11 @@
 }
 
 .item_name {
-    font-family: Prosto One, sans-serif;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .item_type {
-    font-family: Prosto One, sans-serif;
     font-size: 14px;
     color: #B6B6B6;
 }
@@ -43,13 +42,11 @@
 }
 
 .counter {
-    font-family: Proxima Nova, sans-serif;
     font-size: 22px;
     font-weight: bold;
 }
 
 .item_price {
-    font-family: Proxima Nova, sans-serif;
     font-size: 22px;
     font-weight: bold;
     margin-right: 93px;
