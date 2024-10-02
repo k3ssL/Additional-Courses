@@ -8,11 +8,11 @@
     justify-content: space-between;
 }
 
-.header > img {
+.logo {
     cursor: pointer;
 }
 
-.container > hr {
+.separator {
     margin-top: 45px;
     background-color: #F6F6F6;
     height: 1px;
@@ -35,7 +35,7 @@
     transition: background-color 0.3s;
 }
 
-.cart > hr {
+.cart_separator {
     height: 25px;
     opacity: 25%;
     margin-right: 10px;
@@ -51,7 +51,7 @@
     background-color: #174a6e;
 }
 
-.right_part > img {
+.cart_img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
