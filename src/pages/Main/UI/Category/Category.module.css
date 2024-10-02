@@ -23,7 +23,7 @@
     transition: background-color 0.3s;
 }
 
-.container > p {
+.name {
     font-weight: bold;
 }
 

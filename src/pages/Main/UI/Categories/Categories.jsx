@@ -7,8 +7,6 @@ const Categories = ({ setActiveCategories }) => {
     const { categories, localActiveCategory, handleActiveCategory, activeCategoryName } =
         useCategories(setActiveCategories)
 
-    console.log(categories)
-
     return (
         <>
             <div className={classes.container}>
