@@ -11,7 +11,7 @@ const Cards = ({ activeCategory }) => {
         <div className={classes.container}>
             {courses.length > 0
                 ? courses
-                      .filter((course) => activeCategory === "0" || course.category === activeCategory)
+                      .filter((course) => activeCategory === 0 || course.category === activeCategory)
                       .map((course) => (
                           <Card
                               key={course.id}
