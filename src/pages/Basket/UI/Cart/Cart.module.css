@@ -20,6 +20,7 @@
     height: 1px;
     background-color: #F4F4F4;
     border: 0;
+    margin-bottom: 39px;
 }
 
 .trash {
@@ -35,6 +36,7 @@
     align-items: center;
     justify-content: space-between;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .total_courses_price {
