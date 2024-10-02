@@ -7,7 +7,6 @@
     justify-content: center;
     margin-right: 35px;
     margin-bottom: 65px;
-    cursor: pointer;
 }
 
 .img {
@@ -40,6 +39,7 @@
     height: 32px;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .active_type {
