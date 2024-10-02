@@ -21,7 +21,7 @@ const Cart = () => {
                     <p>Очистить корзину</p>
                 </div>
             </div>
-            <hr />
+            <hr className={classes.separator} />
             <CartItems />
             <div className={classes.total_courses}>
                 <span>Всего курсов: {totalCourses} шт.</span>
