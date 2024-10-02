@@ -21,8 +21,8 @@ const Card = ({ id, image, name, types, price }) => {
 
     return (
         <div className={classes.container}>
-            <img src={image} alt={"card-pic"} />
-            <span className={classes.card_name}>{name}</span>
+            <img src={image} alt={"card-pic"} className={classes.img} />
+            <span className={classes.name}>{name}</span>
             <div className={classes.types}>
                 {types.map((typeId, index) => (
                     <span
@@ -35,8 +35,8 @@ const Card = ({ id, image, name, types, price }) => {
                 ))}
             </div>
             <div className={classes.bottom_part}>
-                <span>от {price} ₽</span>
-                <button onClick={handleAddToCart}>
+                <span className={classes.price}>от {price} ₽</span>
+                <button onClick={handleAddToCart} className={classes.add_button}>
                     <img src={isButtonActive ? "/img/Vector2.png" : "/img/Vector.png"} alt={"add icon"} />
                     Добавить
                     {clickCount > 0 && <span className={classes.counter}>{clickCount}</span>}
