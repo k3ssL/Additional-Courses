@@ -7,12 +7,12 @@ const CartItem = ({ id, img, name, type, counter, price }) => {
 
     return (
         <div className={classes.container}>
-            <img src={img} alt={"item-pic"} className={classes.item_img} />
-            <div className={classes.item_name_type}>
-                <span className={classes.item_name}>{name}</span>
-                <span className={classes.item_type}>{type}</span>
+            <img src={img} alt={"item-pic"} className={classes.img} />
+            <div className={classes.name_type}>
+                <span className={classes.name}>{name}</span>
+                <span className={classes.type}>{type}</span>
             </div>
-            <div className={classes.items_counter}>
+            <div className={classes.counter_container}>
                 <img
                     src={"/img/Group 35.png"}
                     className={classes.control_counter}
@@ -27,11 +27,11 @@ const CartItem = ({ id, img, name, type, counter, price }) => {
                     onClick={() => increaseInCart(id, type)}
                 />
             </div>
-            <span className={classes.item_price}>{price * counter} ₽</span>
+            <span className={classes.price}>{price * counter} ₽</span>
             <img
                 src={"/img/Group 36.png"}
                 alt={"delete-item-pic"}
-                className={classes.item_delete}
+                className={classes.delete}
                 onClick={() => removeFromCart(id, type)}
             />
         </div>
