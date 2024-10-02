@@ -6,13 +6,11 @@ import { useCart } from "../../../../shared/providers/CartContext"
 const CartItems = () => {
     const { cartItems } = useCart()
 
-    console.log(cartItems)
-
     return (
         <div className={classes.container}>
             {cartItems.map((item) => (
                 <CartItem
-                    key={item.id}
+                    key={`${item.id}-${item.type}`}
                     id={item.id}
                     img={item.image}
                     name={item.name}

@@ -17,14 +17,14 @@ const CartItem = ({ id, img, name, type, counter, price }) => {
                     src={"/img/Group 35.png"}
                     className={classes.control_counter}
                     alt={"minus-pic"}
-                    onClick={() => decreaseFromCart(id)}
+                    onClick={() => decreaseFromCart(id, type)}
                 />
                 <span className={classes.counter}>{counter}</span>
                 <img
                     src={"/img/Group 37.png"}
                     className={classes.control_counter}
                     alt={"plus-pic"}
-                    onClick={() => increaseInCart(id)}
+                    onClick={() => increaseInCart(id, type)}
                 />
             </div>
             <span className={classes.item_price}>{price * counter} ₽</span>
@@ -32,7 +32,7 @@ const CartItem = ({ id, img, name, type, counter, price }) => {
                 src={"/img/Group 36.png"}
                 alt={"delete-item-pic"}
                 className={classes.item_delete}
-                onClick={() => removeFromCart(id)}
+                onClick={() => removeFromCart(id, type)}
             />
         </div>
     )
