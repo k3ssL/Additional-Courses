@@ -1,7 +1,7 @@
 import React from "react"
 import classes from "./Cart.module.css"
 import CartItems from "../CartItems/CartItems"
-import { MAIN_ROUTE, SBP_ROUTE } from "../../../../utils/consts"
+import { MAIN_ROUTE, PAY_ROUTE } from "../../../../utils/consts"
 import { useCart } from "../../../../shared/providers/CartContext"
 import { useNavigate } from "react-router-dom"
 
@@ -34,7 +34,7 @@ const Cart = () => {
                     <img src={"/img/Path.png"} alt={"back-arrow-pic"} />
                     Вернуться назад
                 </button>
-                <button className={classes.pay_button} onClick={() => (window.location.href = SBP_ROUTE)}>
+                <button className={classes.pay_button} onClick={() => (window.location.href = PAY_ROUTE)}>
                     Оплатить сейчас
                 </button>
             </div>
