@@ -44,6 +44,7 @@
 
 .active_type {
     background-color: #fff;
+    border-radius: 5px;
 }
 
 .bottom_part {
