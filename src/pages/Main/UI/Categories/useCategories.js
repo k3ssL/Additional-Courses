@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { API_URL } from "../../../../app/consts"
 
 export const useCategories = (setActiveCategories) => {
     const [categories, setCategories] = useState([])
@@ -15,14 +16,9 @@ export const useCategories = (setActiveCategories) => {
     }
 
     useEffect(() => {
-        async function fetchCategories() {
-            const response = await axios.get("https://66f19d744153791915518fff.mockapi.io/api/categories")
-            console.log(response.data)
+        axios.get(`${API_URL}/categories`).then((response) => {
             setCategories(response.data)
-            handleActiveCategory(0)
-        }
-
-        fetchCategories()
+        })
     }, [])
 
     return {
