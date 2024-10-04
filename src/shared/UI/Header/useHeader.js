@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom"
-import { BASKET_ROUTE, MAIN_ROUTE } from "../../../utils/consts"
+import { BASKET_ROUTE, MAIN_ROUTE } from "../../../app/consts"
 
 export const useHeader = () => {
     const navigate = useNavigate()

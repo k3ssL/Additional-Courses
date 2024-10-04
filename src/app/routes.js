@@ -1,4 +1,4 @@
-import { BASKET_ROUTE, MAIN_ROUTE } from "../utils/consts"
+import { BASKET_ROUTE, MAIN_ROUTE } from "./consts"
 import Main from "../pages/Main/Main"
 import Basket from "../pages/Basket/Basket"
 
