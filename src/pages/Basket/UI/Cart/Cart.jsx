@@ -16,7 +16,7 @@ const Cart = () => {
                     <img src={"/img/iconfinder_shopping-cart_2561279 2.png"} alt={"cart-pic"} />
                     <h1>Корзина</h1>
                 </div>
-                <div className={classes.trash} onClick={clearCart}>
+                <div className={classes.trash} onClick={() => clearCart()}>
                     <img src={"/img/iconfinder_trash-2_3324927 1.png"} alt={"trash-pic"} />
                     <p>Очистить корзину</p>
                 </div>
