@@ -1,0 +1,55 @@
+.container {
+    position: absolute;
+    right: 80px;
+    top: 200px;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+}
+
+.label img {
+    margin-right: 8px;
+}
+
+.label b {
+    margin-right: 8px;
+}
+
+.label span {
+    color: #1D548C;
+    border-bottom: 1px dashed #1D548C;
+    cursor: pointer;
+}
+
+.popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+}
+
+.popup ul {
+    overflow: hidden;
+}
+
+.popup ul li {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.popup ul li.active,
+.popup ul li:hover {
+    background: rgba(29, 84, 140, 0.05);
+}
+
+.popup ul li.active {
+    font-weight: bold;
+    color: #1D548C;
+}
