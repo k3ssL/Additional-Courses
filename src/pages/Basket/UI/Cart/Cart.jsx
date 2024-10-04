@@ -1,7 +1,7 @@
 import React from "react"
 import classes from "./Cart.module.css"
 import CartItems from "../CartItems/CartItems"
-import { MAIN_ROUTE, PAY_ROUTE } from "../../../../utils/consts"
+import { MAIN_ROUTE, PAY_ROUTE } from "../../../../app/consts"
 import { useCart } from "../../../../shared/providers/CartContext"
 import { useNavigate } from "react-router-dom"
 

@@ -1,6 +1,6 @@
 import React from "react"
 import classes from "./EmptyCart.module.css"
-import { MAIN_ROUTE } from "../../../../utils/consts"
+import { MAIN_ROUTE } from "../../../../app/consts"
 import { useNavigate } from "react-router-dom"
 
 const EmptyCart = () => {
