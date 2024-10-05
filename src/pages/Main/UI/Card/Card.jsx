@@ -1,23 +1,14 @@
 import React from "react"
 import classes from "./Card.module.css"
 import { useCard } from "./useCard"
-import { useCart } from "../../../../shared/providers/CartContext"
 
 const Card = ({ id, image, name, types, price }) => {
-    const { handleTypeClick, activeType, typeNames, isButtonActive, clickCount, handleAddButtonClick } = useCard()
-    const { addToCart } = useCart()
-
-    const handleAddToCart = () => {
-        const course = {
-            id,
-            name,
-            image,
-            type: typeNames[activeType],
-            price,
-        }
-        addToCart(course)
-        handleAddButtonClick()
-    }
+    const { handleTypeClick, activeType, typeNames, isButtonActive, clickCount, handleAddToCart } = useCard(
+        id,
+        name,
+        image,
+        price,
+    )
 
     return (
         <div className={classes.container}>
