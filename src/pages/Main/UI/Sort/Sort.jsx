@@ -1,19 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import classes from "./Sort.module.css"
+import { useSort } from "./useSort"
 
 const Sort = ({ value, setValue }) => {
-    const [open, setOpen] = useState(false)
-
-    const list = [
-        { name: "алфавиту", sortProperty: "alphabet" },
-        { name: "популярности", sortProperty: "popularity" },
-        { name: "цене", sortProperty: "price" },
-    ]
-
-    const onClickList = (obj) => {
-        setValue(obj)
-        setOpen(false)
-    }
+    const { open, setOpen, list, onClickList } = useSort(setValue)
 
     return (
         <div className={classes.container}>
