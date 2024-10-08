@@ -16,9 +16,14 @@ export const useCategories = (setActiveCategories) => {
     }
 
     useEffect(() => {
-        axios.get(`${API_URL}/categories`).then((response) => {
-            setCategories(response.data)
-        })
+        axios
+            .get(`${API_URL}/categories`)
+            .then((response) => {
+                setCategories(response.data)
+            })
+            .catch((error) => {
+                console.error("Ошбика при загрузке категорий: ", error)
+            })
     }, [])
 
     return {
