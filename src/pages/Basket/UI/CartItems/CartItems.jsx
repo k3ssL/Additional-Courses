@@ -1,5 +1,4 @@
 import React from "react"
-
 import CartItem from "../CartItem/CartItem"
 import { useCart } from "../../../../shared/providers/CartContext"
 
